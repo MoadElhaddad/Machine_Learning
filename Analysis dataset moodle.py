@@ -55,7 +55,7 @@ def plot_scores(silhouette_scores, davies_bouldin_scores, calinski_harabasz_scor
 def display_dataset(data,shouldBlock = True):
     f0 = data[:,0] # tous les elements de la premiere colonne
     f1 = data[:,1] # tous les elements de la deuxieme colonne
-    #Affichage du dataset
+    
     plt.scatter(f0,f1, s=8)
     plt.title("Your selected dataset")
     plt.show(block = shouldBlock) 
@@ -86,7 +86,7 @@ def display_clusters(data,distance,k,thresh,shouldBlock = True):
     f0 = data[:,0] # tous les elements de la premiere colonne
     f1 = data[:,1] # tous les elements de la deuxieme colonne
     plt.figure(figsize = (12,12))
-    #Affichage du clustering 
+    
     plt.scatter(f0,f1, c= labels, s=8)
     plt.title(f"Resultat du clustering {distance}")
     plt.show(block = shouldBlock)
