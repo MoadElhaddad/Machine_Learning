@@ -58,7 +58,7 @@ def display_clusters(data, distance, k, thresh, shouldBlock=True):
     f0 = data[:,0] 
     f1 = data[:,1] 
     plt.figure(figsize=(12,12))
-    # Display the clustering
+    
     plt.scatter(f0, f1, c=labels, s=8)
     plt.title(f"Result of clustering {distance}")
     plt.text(0.05, 0.95, f"Number of clusters: {kres}", transform=plt.gca().transAxes)
