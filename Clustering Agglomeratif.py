@@ -21,8 +21,8 @@ def load_dataset(path, filenames):
 
 def display_dataset(dataset, shouldBlock=True):
     data, columns = dataset
-    f0 = data[:,0] # all elements of the first column
-    f1 = data[:,1] # all elements of the second column
+    f0 = data[:,0] 
+    f1 = data[:,1] 
     
     plt.scatter(f0, f1, s=8)
     plt.title("Your selected dataset")
@@ -55,8 +55,8 @@ def display_clusters(data, distance, k, thresh, shouldBlock=True):
     kres = model.n_clusters_
     leaves = model.n_leaves_
 
-    f0 = data[:,0] # all elements of the first column
-    f1 = data[:,1] # all elements of the second column
+    f0 = data[:,0] 
+    f1 = data[:,1] 
     plt.figure(figsize=(12,12))
     # Display the clustering
     plt.scatter(f0, f1, c=labels, s=8)
