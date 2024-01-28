@@ -31,7 +31,7 @@ def plot_data(data, labels, dataset_name, k):
 
 def plot_scores(silhouette_scores, davies_bouldin_scores, calinski_harabasz_scores, dataset_name):
     k = len(silhouette_scores) + 2
-    fig, axs = plt.subplots(3, 1, figsize=(3, 6))  # Create a figure with 3 subplots, arranged vertically
+    fig, axs = plt.subplots(3, 1, figsize=(3, 6))  
 
     # Plot Silhouette scores
     axs[0].plot(range(2, k), silhouette_scores, label='Silhouette')
@@ -58,7 +58,7 @@ def plot_scores(silhouette_scores, davies_bouldin_scores, calinski_harabasz_scor
         
 
 def main():
-    path = '/home/moad/clustering-benchmark/src/main/resources/datasets/artificial//' 
+    path = '/home/moad/clustering-benchmark/src/main/resources/datasets/artificial//' #replace with your path
     dataset_names = ['xclara', 'square4', 'zelnik1', 'xor']
     datasets = load_data(path, dataset_names)
 
@@ -94,8 +94,8 @@ def main():
         num_clusters_davies_bouldin = davies_bouldin_scores.index(min(davies_bouldin_scores)) + 2
         num_clusters_calinski_harabasz = calinski_harabasz_scores.index(max(calinski_harabasz_scores)) + 2
 
-        # Compute the scores and labels for the optimal number of clusters
-        _, _, _, labels = compute_scores(data, num_clusters_silhouette)        # Plot the clustered data for the optimal number of clusters
+        
+        _, _, _, labels = compute_scores(data, num_clusters_silhouette)        
         plot_data(data, labels, dataset_names[i], num_clusters_silhouette)
 
         plot_scores(silhouette_scores, davies_bouldin_scores, calinski_harabasz_scores, dataset_names[i])
