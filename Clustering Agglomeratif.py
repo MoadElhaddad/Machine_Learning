@@ -23,7 +23,7 @@ def display_dataset(dataset, shouldBlock=True):
     data, columns = dataset
     f0 = data[:,0] # all elements of the first column
     f1 = data[:,1] # all elements of the second column
-    # Display the dataset
+    
     plt.scatter(f0, f1, s=8)
     plt.title("Your selected dataset")
     if shouldBlock:
