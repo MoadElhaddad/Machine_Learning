@@ -30,7 +30,7 @@ def display_dataset(dataset, shouldBlock=True):
         plt.show()
 
 def display_dendrogramme(dataset, option, shouldBlock=True):
-    data, _ = dataset  # Unpack the data from the dataset tuple
+    data, _ = dataset  
     linked_mat = shc.linkage(data, option)
 
     print(f"Dendrogramme {option} donnees initiales")
