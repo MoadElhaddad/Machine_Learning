@@ -1,4 +1,4 @@
-# combined one :  
+ 
 from scipy.io import arff
 import pandas as pd
 from sklearn import cluster
@@ -53,8 +53,8 @@ def plot_scores(silhouette_scores, davies_bouldin_scores, calinski_harabasz_scor
     
     
 def display_dataset(data,shouldBlock = True):
-    f0 = data[:,0] # tous les elements de la premiere colonne
-    f1 = data[:,1] # tous les elements de la deuxieme colonne
+    f0 = data[:,0] 
+    f1 = data[:,1] 
     
     plt.scatter(f0,f1, s=8)
     plt.title("Your selected dataset")
@@ -83,8 +83,8 @@ def display_clusters(data,distance,k,thresh,shouldBlock = True):
     kres = model.n_clusters_
     leaves = model.n_leaves_
     
-    f0 = data[:,0] # tous les elements de la premiere colonne
-    f1 = data[:,1] # tous les elements de la deuxieme colonne
+    f0 = data[:,0] 
+    f1 = data[:,1] 
     plt.figure(figsize = (12,12))
     
     plt.scatter(f0,f1, c= labels, s=8)
