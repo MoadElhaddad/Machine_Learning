@@ -143,7 +143,7 @@ def main():
             best_k = None
             best_silhouette = -1
             k = 2
-            while not(len(silhouette_scores) > 2 and silhouette_scores[-1] < silhouette_scores[-2] and silhouette_scores[-2] < silhouette_scores[-3]) and (k < 31):  # adjust the range as needed
+            while not(len(silhouette_scores) > 2 and silhouette_scores[-1] < silhouette_scores[-2] and silhouette_scores[-2] < silhouette_scores[-3]) and (k < 31):  
                 silhouette, davies_bouldin, calinski_harabasz, labels_tmp = compute_scores(data, k)
                 silhouette_scores.append(silhouette)
                 davies_bouldin_scores.append(davies_bouldin)  
